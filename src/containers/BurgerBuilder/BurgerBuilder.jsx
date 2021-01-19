@@ -29,13 +29,9 @@ export default function BurgerBuilder() {
       .reduce((sum, el) => {
         return sum + el;
       }, 0);
-
-    if (sum > 0) {
-      setPurchable(true);
-    }
-    
+    setPurchable(sum > 0);
   };
-  console.log(purchable)
+  console.log(purchable);
   const addIngredientHandler = (type) => {
     const oldCountIngredient = ingredients[type];
     const updatedCountIngredient = oldCountIngredient + 1;

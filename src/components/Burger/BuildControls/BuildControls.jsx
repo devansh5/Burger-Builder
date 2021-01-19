@@ -8,10 +8,9 @@ export default function BuildControls(props) {
     { label: "Tofu", type: "Tofu" },
     { label: "Salad", type: "Salad" },
   ];
-  console.log(props.purchable)
   return (
     <div className={classes.BuildControls}>
-        <p>Total Price: {props.totalprice}</p>
+      <p>Total Price: {props.totalprice}</p>
       {controls.map((ctrl) => {
         return (
           <BuildControl
@@ -24,9 +23,10 @@ export default function BuildControls(props) {
           />
         );
       })}
-      
-        <div className={classes.OrderButton} disabled={!props.purchable}>ORDER NOW</div>
 
+      <div className={classes.OrderButton} disabled={!props.purchable}>
+        ORDER NOW
+      </div>
     </div>
   );
 }
