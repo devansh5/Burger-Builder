@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import BuildControls from '../../components/Burger/BuildControls/BuildControls'
 import Burger from '../../components/Burger/Burger'
 import Wrapped from '../../hoc/Wrapped'
 export default function BurgerBuilder() {
@@ -10,8 +11,8 @@ export default function BurgerBuilder() {
     })
     return (
         <Wrapped>
-            <div>buildcontrols</div> 
             <Burger ingredients={ingredients}/>
+            <BuildControls/>
         </Wrapped>
     )
 }
