@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import Burger from "../../components/Burger/Burger";
+import Modal from "../../components/UI/Modal/Modal";
 import Wrapped from "../../hoc/Wrapped";
-
+import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary"
 const INGREDIENT_PRICES = {
   Salad: 3,
   Cheese: 5,
@@ -72,6 +73,9 @@ export default function BurgerBuilder() {
   }
   return (
     <Wrapped>
+      <Modal>
+        <OrderSummary ingredients={ingredients} />
+      </Modal>
       <Burger ingredients={ingredients} />
       <BuildControls
         ingredientsAdded={addIngredientHandler}
